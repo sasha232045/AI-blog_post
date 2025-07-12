@@ -7,15 +7,49 @@ site_author: あなたの名前
 theme:
   name: material # Material for MkDocsテーマを使用
   language: ja   # サイトの言語を日本語に
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - navigation.footer
+    - navigation.path
 
 # 共通CSSの指定 (後で作成)
 extra_css:
   - stylesheets/extra.css
 
+# プラグインの設定
+plugins:
+  - search
+  - autorefs
+
+# Markdown拡張機能
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
 # ナビゲーション（目次）の設定
 # ここにフォルダ構造を記述すると、それがサイトのメニューになる
 nav:
   - ホーム: index.md
+  - 記事一覧:
+    - 作成済み記事一覧: 00_記事一覧/01_作成済み記事一覧.md
+    - 未作成記事一覧: 00_記事一覧/02_未作成記事一覧.md
   - AI基礎:
     - AIの定義とは: 01_AI基礎/01_AIの定義とは.md
     - 機械学習とは: 01_AI基礎/02_機械学習とは.md
@@ -74,3 +108,4 @@ nav:
     - 重回帰とは: 04_用語解説/40_重回帰とは.md
     - 非線形回帰とは: 04_用語解説/41_非線形回帰とは.md
     - 説明変数とは: 04_用語解説/42_説明変数とは.md
+    - 目的変数とは: 04_用語解説/43_目的変数とは.md
