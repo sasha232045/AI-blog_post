@@ -1,18 +1,13 @@
 [//]: # (ホーム)
-# Welcome to MkDocs
+# AI学習ブログへようこそ
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+このサイトは、AI（人工知能）に関する様々なトピックを学習し、記録するためのブログです。
 
-## Commands
+左側のナビゲーションメニューから、興味のあるカテゴリを選択してください。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## コンテンツ
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+*   **AI基礎**: [AIの定義]、[機械学習]、[ディープラーニング]など、AIを学ぶ上で基本となる概念を解説します。
+*   **AIの歴史**: [ダートマス会議]から現代に至るまでの、AI研究の歴史的な流れを追います。
+*   **AIと社会**: AIが私たちの社会に与える影響や、[デジタルディバイド]などの課題について考えます。
+*   **用語解説**: AI関連の専門用語を分かりやすく解説する、Wiki形式のページです。
