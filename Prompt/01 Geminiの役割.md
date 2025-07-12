@@ -3,6 +3,10 @@ gemini --model gemini-pro --prompt-file Gemini/00_MasterPrompt.md
 gemini --model gemini-pro --prompt-file Gemini/00_MasterPrompt.md --prompt-mode=disabled
 
 
+# site作成
+cd my-ai-blog
+mkdocs gh-deploy
+
 
 
 
