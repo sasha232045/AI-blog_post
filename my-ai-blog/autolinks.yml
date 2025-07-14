@@ -1,0 +1,23 @@
+mappings:
+  - term: k-means法
+    path: 04_用語解説/44_k-means法.md
+  - term: 階層的クラスタリング
+    path: 04_用語解説/45_階層的クラスタリング.md
+  - term: DBSCAN
+    path: 04_用語解説/46_DBSCAN.md
+  - term: 次元の呪い
+    path: 04_用語解説/47_次元の呪い.md
+  - term: 特徴選択
+    path: 04_用語解説/48_特徴選択.md
+  - term: 特徴抽出
+    path: 04_用語解説/49_特徴抽出.md
+  - term: 主成分分析
+    path: 04_用語解説/50_主成分分析.md
+  - term: 行列演算
+    path: 04_用語解説/51_行列演算.md
+  - term: 微分の連鎖律
+    path: 04_用語解説/52_微分の連鎖律.md
+  - term: 畳み込みニューラルネットワーク
+    path: 04_用語解説/53_畳み込みニューラルネットワーク.md
+  - term: 勾配消失問題
+    path: 04_用語解説/54_勾配消失問題.md
