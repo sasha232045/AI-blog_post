@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1989,11 +1998,11 @@
 
 <p>難易度: 120</p>
 <h2 id="gpu">GPUとは<a class="headerlink" href="#gpu" title="Permanent link">&para;</a></h2>
-<p><strong>GPU (Graphics Processing Unit)</strong> とは、コンピュータの部品の一つで、もともとはその名の通り、3Dグラフィックスなどの画像処理を専門に担当するために開発された半導体チップ（プロセッサ）です。</p>
+<p><strong><a href="04_用語解説/13_GPU.md"><abbr title="Graphics Processing Unit（グラフィックス処理装置）- 深層学習の計算処理を高速化する専用チップ">GPU</abbr></a> (Graphics Processing Unit)</strong> とは、コンピュータの部品の一つで、もともとはその名の通り、3Dグラフィックスなどの画像処理を専門に担当するために開発された半導体チップ（プロセッサ）です。</p>
 <p>コンピュータの中心的な計算処理を担う<strong>CPU (Central Processing Unit)</strong> が「万能で複雑な処理を逐次的に行う司令官」だとすれば、GPUは「単純な計算を並列的に、かつ大量にこなす専門部隊」に例えることができます。</p>
 <h3 id="aigpu">なぜAIにGPUが使われるのか？<a class="headerlink" href="#aigpu" title="Permanent link">&para;</a></h3>
-<p>現代のAI、特に<strong>ディープラーニング (Deep Learning)</strong> の発展は、GPUの計算能力なくしては語れません。</p>
-<p>ディープラーニングの中核をなす<strong>ニューラルネットワーク (Neural Network)</strong> の計算は、膨大な数の単純な計算、特に<strong>行列演算</strong>の繰り返しで構成されています。これは、3Dグラフィックスの描画処理（画面上の無数のピクセルの色を同時に計算する）と、計算の構造が非常によく似ています。</p>
+<p>現代のAI、特に<strong><a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a> (Deep Learning)</strong> の発展は、GPUの計算能力なくしては語れません。</p>
+<p>ディープラーニングの中核をなす<strong><a href="04_用語解説/01_ニューラルネットワーク.md"><abbr title="人間の脳の神経細胞のネットワークを模倣したコンピュータモデル">ニューラルネットワーク</abbr></a> (Neural Network)</strong> の計算は、膨大な数の単純な計算、特に<strong>行列演算</strong>の繰り返しで構成されています。これは、3Dグラフィックスの描画処理（画面上の無数のピクセルの色を同時に計算する）と、計算の構造が非常によく似ています。</p>
 <ul>
 <li><strong>CPUの処理</strong>: 複雑な命令を一つずつ高速に処理するのが得意（直列処理）。</li>
 <li><strong>GPUの処理</strong>: 単純な命令を数千のコアで同時に処理するのが得意（並列処理）。</li>
@@ -2108,5 +2117,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

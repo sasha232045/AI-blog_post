@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -68,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#machine-learning" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -412,6 +421,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -444,6 +455,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -452,16 +465,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      機械学習とは：データから「学習」するコンピュータ
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="機械学習とは：データから「学習」するコンピュータ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       1. 機械学習の定義：経験からの自動的な改善
@@ -469,8 +472,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       2. 機械学習の主要な種類
@@ -511,18 +514,13 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2018,10 +2016,8 @@
 
 
 
-  <h1>機械学習</h1>
-
+<h1 id="machine-learning">機械学習とは：データから「学習」するコンピュータ<a class="headerlink" href="#machine-learning" title="Permanent link">&para;</a></h1>
 <p>難易度: 10</p>
-<h2 id="_1">機械学習とは：データから「学習」するコンピュータ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>前回の記事では、[AIの定義]で、AI（人工知能）が多様な定義を持つ広範な概念であることを学びました。今回は、そのAIを実現するための中心的な技術の一つである「機械学習 (Machine Learning)」について、その基本的な考え方と仕組みを解説します。</p>
 <h3 id="1">1. 機械学習の定義：経験からの自動的な改善<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>機械学習とは、一言で言えば、「コンピュータがデータから自動的に学習し、その性能を向上させていくための技術や手法」のことです。</p>
@@ -2030,27 +2026,27 @@
 <p>この「経験（データ）を通じて、タスク（例：スパム判定）の性能が改善される」という点が、機械学習の最も重要な特徴です。</p>
 <h3 id="2">2. 機械学習の主要な種類<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>機械学習は、その「学習」の方法によって、主に以下の3つの種類に分類されます。</p>
-<h4 id="a-supervised-learning">a) 教師あり学習 (Supervised Learning)<a class="headerlink" href="#a-supervised-learning" title="Permanent link">&para;</a></h4>
+<h4 id="a-supervised-learning">a) <a href="04_用語解説/05_教師あり学習.md"><abbr title="正解ラベルが付いたデータを使ってモデルを学習させる機械学習手法">教師あり学習</abbr></a> (Supervised Learning)<a class="headerlink" href="#a-supervised-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>概要</strong>: 「正解データ」を与えて学習させる方法です。入力データと、それに対応する正しい出力（ラベル）をペアにしたデータセットを大量に用意し、その関係性をモデルに学習させます。</li>
 <li><strong>例</strong>: <ul>
-<li><strong>分類 (Classification)</strong>: データがどのカテゴリに属するかを予測します。（例：メールがスパムか否か、画像に写っているのが犬か猫か）</li>
-<li><strong>回帰 (Regression)</strong>: 連続する数値を予測します。（例：過去の気温データから明日の気温を予測する、家の広さや立地から住宅価格を予測する）</li>
+<li><strong><a href="04_用語解説/08_分類.md"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a> (Classification)</strong>: データがどのカテゴリに属するかを予測します。（例：メールがスパムか否か、画像に写っているのが犬か猫か）</li>
+<li><strong><a href="04_用語解説/09_回帰.md"><abbr title="連続値を予測する教師あり学習タスク">回帰</abbr></a> (Regression)</strong>: 連続する数値を予測します。（例：過去の気温データから明日の気温を予測する、家の広さや立地から住宅価格を予測する）</li>
 </ul>
 </li>
 <li><strong>特徴</strong>: 高い精度が期待できますが、質の高い正解データを大量に用意するコストがかかる場合があります。</li>
 </ul>
-<h4 id="b-unsupervised-learning">b) 教師なし学習 (Unsupervised Learning)<a class="headerlink" href="#b-unsupervised-learning" title="Permanent link">&para;</a></h4>
+<h4 id="b-unsupervised-learning">b) <a href="04_用語解説/06_教師なし学習.md"><abbr title="正解ラベルなしでデータの構造やパターンを発見する機械学習手法">教師なし学習</abbr></a> (Unsupervised Learning)<a class="headerlink" href="#b-unsupervised-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>概要</strong>: 正解データを与えずに、データそのものに潜む構造やパターンを発見させる方法です。入力データのみを与え、モデルが自律的にデータの本質的な特徴を捉えます。</li>
 <li><strong>例</strong>: <ul>
-<li><strong>クラスタリング (Clustering)</strong>: データを類似した性質を持つグループに自動的に分類します。（例：顧客データを購買傾向に基づいてセグメント分けする）</li>
-<li><strong>次元削減 (Dimensionality Reduction)</strong>: データの重要な特徴は維持したまま、情報の量を圧縮します。（例：多くの特徴を持つ複雑なデータを、より少ない変数で表現し直す）</li>
+<li><strong><a href="04_用語解説/11_クラスタリング.md"><abbr title="データを似た特徴を持つグループに分ける教師なし学習手法">クラスタリング</abbr></a> (Clustering)</strong>: データを類似した性質を持つグループに自動的に分類します。（例：顧客データを購買傾向に基づいてセグメント分けする）</li>
+<li><strong><a href="04_用語解説/12_次元削減.md"><abbr title="データの特徴量を減らしながら重要な情報を保持する手法">次元削減</abbr></a> (Dimensionality Reduction)</strong>: データの重要な特徴は維持したまま、情報の量を圧縮します。（例：多くの特徴を持つ複雑なデータを、より少ない変数で表現し直す）</li>
 </ul>
 </li>
 <li><strong>特徴</strong>: 正解データが不要なため、様々なデータに適用しやすいですが、得られた結果の解釈が難しい場合があります。</li>
 </ul>
-<h4 id="c-reinforcement-learning">c) 強化学習 (Reinforcement Learning)<a class="headerlink" href="#c-reinforcement-learning" title="Permanent link">&para;</a></h4>
+<h4 id="c-reinforcement-learning">c) <a href="04_用語解説/07_強化学習.md"><abbr title="環境との相互作用を通じて最適な行動を学習する機械学習手法">強化学習</abbr></a> (Reinforcement Learning)<a class="headerlink" href="#c-reinforcement-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>概要</strong>: 「試行錯誤」を通じて学習する方法です。エージェント（学習する主体）が、ある環境の中で行動を選択し、その結果として得られる「報酬」を最大化するように学習を進めます。</li>
 <li><strong>例</strong>: <ul>
@@ -2060,9 +2056,9 @@
 </li>
 <li><strong>特徴</strong>: 最適な行動戦略そのものを学習できるため、未知の状況にも対応できる可能性がありますが、学習に非常に時間がかかることがあります。</li>
 </ul>
-<h3 id="_2">まとめ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_1">まとめ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>機械学習は、データという「経験」からコンピュータが自律的に学習し、賢くなっていくための強力なツールです。そしてその学習方法には、正解を教える「教師あり学習」、データ自身から構造を見つけ出す「教師なし学習」、試行錯誤で学ぶ「強化学習」といった、多様なアプローチが存在します。</p>
-<p>次回の記事では、この機械学習、特に近年のAIブームを牽引している「ディープラーニング」について、さらに詳しく掘り下げていきます。</p>
+<p>次回の記事では、この機械学習、特に近年のAIブームを牽引している「<a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a>」について、さらに詳しく掘り下げていきます。</p>
 
 
 
@@ -2165,5 +2161,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

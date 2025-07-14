@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2007,7 +2016,7 @@
 <p>ニューラルネットワーク全体の誤差は、最終出力層の誤差であり、それは中間層のニューロンの出力の関数であり、さらにその中間層のニューロンの出力は、その前の層のニューロンの出力と重みの関数であり…というように、複雑な関数の合成で表現されます。</p>
 <p>ある層の重みを少し変化させたときに、最終的な誤差がどれだけ変化するか（=誤差に対する重みの勾配）を知りたい場合、この合成関数の微分を計算する必要があります。連鎖律を用いることで、この複雑な微分計算を、各層ごとの単純な微分の掛け算に分解し、効率的に計算することが可能になります。これにより、どの重みをどちらの方向にどれだけ調整すれば誤差が最も効率的に減少するかが分かるのです。</p>
 <h3 id="_3">まとめ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>誤差逆伝播法は、「予測と正解のズレ」という最終結果から、その原因をネットワークの各部分に遡って分配し、パラメータを賢く更新していくための洗練されたアルゴリズムです。この効率的な学習手法の確立が、多層で巨大なニューラルネットワーク（ディープラーニング）の学習を現実的な時間で可能にし、今日のAI技術の飛躍的な進歩を支える基盤技術となっています。</p>
+<p>誤差逆伝播法は、「予測と正解のズレ」という最終結果から、その原因をネットワークの各部分に遡って分配し、パラメータを賢く更新していくための洗練されたアルゴリズムです。この効率的な学習手法の確立が、多層で巨大なニューラルネットワーク（<a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a>）の学習を現実的な時間で可能にし、今日のAI技術の飛躍的な進歩を支える基盤技術となっています。</p>
 
 
 
@@ -2110,5 +2119,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

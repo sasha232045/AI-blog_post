@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2010,12 +2019,12 @@
 <p>今日、私たちの社会に急速に浸透しているAI（人工知能）ですが、その研究は決して順風満帆な道のりばかりではありませんでした。大きな期待が寄せられる「ブーム」と、成果が出ずに研究が停滞する「冬の時代」を、これまで幾度となく繰り返してきたのです。AIが歩んできた、この波乱に満ちた歴史を振り返ることは、現代のAIブームをより深く理解する上で不可欠です。</p>
 <h3 id="1-ai-19501960">1. AIの黎明期：夢の始まり (1950年代～1960年代)<a class="headerlink" href="#1-ai-19501960" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>ダートマス会議 (1956年)</strong>: 「人工知能（Artificial Intelligence）」という言葉が、この会議で初めて公に使われました。ジョン・マッカーシー、マービン・ミンスキー、アレン・ニューウェル、ハーバート・サイモンといった、後に「AIの父」と呼ばれる研究者たちが集い、「考える機械」の実現に向けた楽観的な予測を立てました。この会議が、AI研究の正式な幕開けとされています。</li>
+<li><strong><a href="02_AIの歴史/02_ダートマス会議.md">ダートマス会議</a> (1956年)</strong>: 「人工知能（Artificial Intelligence）」という言葉が、この会議で初めて公に使われました。<a href="02_AIの歴史/03_ジョン・マッカーシー.md">ジョン・マッカーシー</a>、<a href="02_AIの歴史/04_マービン・ミンスキー.md">マービン・ミンスキー</a>、アレン・ニューウェル、ハーバート・サイモンといった、後に「AIの父」と呼ばれる研究者たちが集い、「考える機械」の実現に向けた楽観的な予測を立てました。この会議が、AI研究の正式な幕開けとされています。</li>
 <li><strong>初期の成功</strong>: この時期のAIは、「推論」と「探索」が中心でした。パズルを解いたり、数学の定理を証明したり、チェスを指したりと、特定のルールに基づいた問題解決で目覚ましい成果を上げ、人々に大きな期待を抱かせました。</li>
 </ul>
 <h3 id="2-ai-19701980">2. 第一次AIブームと冬の時代 (1970年代～1980年代)<a class="headerlink" href="#2-ai-19701980" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>ブームの到来</strong>: 初期AIの成功を受け、政府や企業から多額の研究資金が投入されました。特に、専門家の知識をコンピュータに取り込み、特定の分野で専門家のように振る舞う「エキスパートシステム」が注目を集めました。</li>
+<li><strong>ブームの到来</strong>: 初期AIの成功を受け、政府や企業から多額の研究資金が投入されました。特に、専門家の知識をコンピュータに取り込み、特定の分野で専門家のように振る舞う「<a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a>」が注目を集めました。</li>
 <li><strong>立ちはだかる壁</strong>: しかし、AI研究者たちの前に、すぐに大きな壁が立ちはだかります。<ol>
 <li><strong>フレーム問題</strong>: 現実世界の問題は、考慮すべき事柄が無限にあり、単純なルールだけでは記述しきれないことが明らかになりました。</li>
 <li><strong>計算能力の限界</strong>: 当時のコンピュータの性能では、組み合わせが爆発的に増加する複雑な問題を解くことができませんでした。</li>
@@ -2026,8 +2035,8 @@
 </ul>
 <h3 id="3-ai-19802000">3. 第二次AIブームと再びの冬 (1980年代後半～2000年代)<a class="headerlink" href="#3-ai-19802000" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>ニューラルネットワークの登場</strong>: 1980年代に入ると、人間の脳の仕組みにヒントを得た「ニューラルネットワーク」の研究が進展します。特に、誤差逆伝播法（Backpropagation）というアルゴリズムが発明されたことで、ネットワーク自身がデータから学習する能力を獲得し、再びAIへの期待が高まりました。（この時点ではまだ層の浅いネットワークでした）</li>
-<li><strong>機械学習の発展</strong>: このブームでは、エキスパートシステムに代わり、「機械学習」が研究の中心となりました。統計的な手法を用いて、データから自動的に知識を獲得するアプローチが主流となります。</li>
+<li><strong>ニューラルネットワークの登場</strong>: 1980年代に入ると、人間の脳の仕組みにヒントを得た「<a href="04_用語解説/01_ニューラルネットワーク.md"><abbr title="人間の脳の神経細胞のネットワークを模倣したコンピュータモデル">ニューラルネットワーク</abbr></a>」の研究が進展します。特に、誤差逆伝播法（Backpropagation）というアルゴリズムが発明されたことで、ネットワーク自身がデータから学習する能力を獲得し、再びAIへの期待が高まりました。（この時点ではまだ層の浅いネットワークでした）</li>
+<li><strong>機械学習の発展</strong>: このブームでは、エキスパートシステムに代わり、「<a href="01_AI基礎/02_機械学習.md"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>」が研究の中心となりました。統計的な手法を用いて、データから自動的に知識を獲得するアプローチが主流となります。</li>
 <li><strong>再びの冬</strong>: しかし、当時のニューラルネットワークは、層を深くすると学習がうまくいかない（勾配消失問題など）という課題を抱えていました。また、学習に必要な計算能力やデータ量も不足しており、その性能は限定的なものでした。結果として、第二次AIブームも決定的なブレークスルーには至らず、研究は再び停滞期に入ります。</li>
 </ul>
 <h3 id="4-ai-2010">4. 第三次AIブーム：ディープラーニングの衝撃 (2010年代～現在)<a class="headerlink" href="#4-ai-2010" title="Permanent link">&para;</a></h3>
@@ -2035,7 +2044,7 @@
 <li><strong>ブレークスルー</strong>: 長い冬の時代を経て、2012年に決定的なブレークスルーが訪れます。画像認識の国際コンテスト「ILSVRC」で、ジェフリー・ヒントン教授が率いるチームが開発した「AlexNet」というディープラーニング（深層学習）を用いたモデルが、他の手法を圧倒的な差で打ち破り優勝しました。</li>
 <li><strong>成功の要因</strong>: この成功は、第二次ブームの頃には解決できなかった課題が、以下の3つの条件が揃ったことで克服された結果でした。<ol>
 <li><strong>ビッグデータ</strong>: インターネットの普及による、膨大な学習データの利用可能性。</li>
-<li><strong>ハードウェアの進化 (GPU)</strong>: 高速な並列計算を可能にするGPUの登場。</li>
+<li><strong>ハードウェアの進化 (<a href="04_用語解説/13_GPU.md"><abbr title="Graphics Processing Unit（グラフィックス処理装置）- 深層学習の計算処理を高速化する専用チップ">GPU</abbr></a>)</strong>: 高速な並列計算を可能にするGPUの登場。</li>
 <li><strong>アルゴリズムの改良</strong>: ディープラーニングの学習を安定させるための技術的な進歩。</li>
 </ol>
 </li>
@@ -2145,5 +2154,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

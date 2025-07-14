@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1989,7 +1998,7 @@
 
 <p>難易度: 70</p>
 <h2 id="xconr1-xconr1">XCON/R1とは (XCON/R1)<a class="headerlink" href="#xconr1-xconr1" title="Permanent link">&para;</a></h2>
-<p><strong>XCON (eXpert CONfigurer)</strong>、またはその初期名である<strong>R1</strong>は、1978年にカーネギーメロン大学のジョン・マクダーモット氏によって開発された、ビジネスの世界で初めて大きな商業的成功を収めた<strong>エキスパートシステム</strong>です。</p>
+<p><strong>XCON (eXpert CONfigurer)</strong>、またはその初期名である<strong>R1</strong>は、1978年にカーネギーメロン大学のジョン・マクダーモット氏によって開発された、ビジネスの世界で初めて大きな商業的成功を収めた<strong><a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a></strong>です。</p>
 <p>このシステムの成功は、AIが学術的な研究対象であるだけでなく、現実のビジネス課題を解決し、莫大な経済的利益を生み出す強力なツールとなり得ることを証明した、歴史的なマイルストーンとして知られています。</p>
 <h3 id="_1">開発の背景：複雑すぎたコンピュータの注文<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>XCONは、当時の大手コンピュータメーカーであった<strong>ディジタル・イクイップメント・コーポレーション (DEC)</strong> の課題を解決するために開発されました。DEC社が販売していたVAXシリーズのような大型コンピュータは、CPU、メモリ、ストレージ、各種ケーブル、ソフトウェアといった無数のコンポーネントから構成されており、顧客の要望に応じてこれらを正しく組み合わせる必要がありました。</p>
@@ -2111,5 +2120,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,7 +2007,7 @@
 
 <p>難易度: 50</p>
 <h2 id="ai">ニューラルネットワークとは：AIの「脳」を構成する基本要素<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>これまでの記事で、AIの歴史や、機械学習、ディープラーニングといった概念に触れてきました。特にディープラーニングは、人間の脳の仕組みにヒントを得た「ニューラルネットワーク」を基盤としていると説明しました。本記事では、このニューラルネットワークが具体的にどのようなもので、どのように機能するのかを、より詳しく解説します。</p>
+<p>これまでの記事で、AIの歴史や、<a href="01_AI基礎/02_機械学習.md"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>、ディープラーニングといった概念に触れてきました。特にディープラーニングは、人間の脳の仕組みにヒントを得た「<a href="04_用語解説/01_ニューラルネットワーク.md"><abbr title="人間の脳の神経細胞のネットワークを模倣したコンピュータモデル">ニューラルネットワーク</abbr></a>」を基盤としていると説明しました。本記事では、このニューラルネットワークが具体的にどのようなもので、どのように機能するのかを、より詳しく解説します。</p>
 <h3 id="1">1. 人間の脳の模倣：人工ニューロン<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>ニューラルネットワークは、その名の通り、人間の脳の神経細胞（ニューロン）の働きを模倣したものです。私たちの脳内には、約860億個ものニューロンが存在し、それぞれが電気信号をやり取りすることで、思考、記憶、学習といった複雑な情報処理を行っています。</p>
 <p>人工ニューラルネットワークでは、この個々のニューロンの働きを「人工ニューロン（パーセプトロン）」と呼ばれるシンプルな計算ユニットで表現します。</p>
@@ -2130,5 +2139,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

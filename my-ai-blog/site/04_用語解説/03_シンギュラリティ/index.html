@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2007,7 +2016,7 @@
 
 <p>難易度: 70</p>
 <h2 id="ai">シンギュラリティとは：AIが人類の知性を超える日<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>AIの進化が加速する中で、未来の社会を語る上で避けて通れない概念の一つに「シンギュラリティ (Singularity)」があります。これは、「技術的特異点」とも訳され、AIが人間の知性を超え、自らより賢いAIを創造し始めることで、技術進歩が指数関数的に加速し、人類の予測や制御を超えた変化が起こる時点を指します。SFの世界の話のように聞こえるかもしれませんが、多くの科学者や未来学者が真剣に議論しているテーマです。</p>
+<p>AIの進化が加速する中で、未来の社会を語る上で避けて通れない概念の一つに「<a href="04_用語解説/03_シンギュラリティ.md"><abbr title="人工知能が人間の知能を超える転換点、技術的特異点">シンギュラリティ</abbr></a> (Singularity)」があります。これは、「技術的特異点」とも訳され、AIが人間の知性を超え、自らより賢いAIを創造し始めることで、技術進歩が指数関数的に加速し、人類の予測や制御を超えた変化が起こる時点を指します。SFの世界の話のように聞こえるかもしれませんが、多くの科学者や未来学者が真剣に議論しているテーマです。</p>
 <h3 id="1">1. シンギュラリティの提唱者と概念<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>シンギュラリティという概念を広く知らしめたのは、未来学者であり発明家でもあるレイ・カーツワイルです。彼は著書『シンギュラリティは近い』の中で、技術の進化が直線的ではなく、指数関数的に進むことを指摘し、2045年頃にはAIが全人類の知性を合わせたものを超える「技術的特異点」に到達すると予測しました。</p>
 <p>カーツワイルの主張の根拠の一つは、「収穫加速の法則 (Law of Accelerating Returns)」です。これは、技術の進歩がさらなる技術の進歩を加速させるという考え方で、例えば、コンピュータの性能向上（ムーアの法則）が、AI研究の進展を加速させ、そのAIが新たなコンピュータ設計を支援するといった好循環を指します。</p>
@@ -2138,5 +2147,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

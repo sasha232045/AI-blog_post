@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,9 +2007,9 @@
 
 <p>難易度: 90</p>
 <h2 id="_1">ジョン・マッカーシーとは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>ジョン・マッカーシー (John McCarthy, 1927-2011)</strong> は、アメリカの計算機科学者であり、認知科学者です。彼は、<strong>「人工知能 (Artificial Intelligence, AI)」</strong> という分野の創始者の一人であり、その命名者として、またAI研究の初期における多大な貢献によって、歴史にその名を刻んでいます。</p>
+<p><strong><a href="02_AIの歴史/03_ジョン・マッカーシー.md">ジョン・マッカーシー</a> (John McCarthy, 1927-2011)</strong> は、アメリカの計算機科学者であり、認知科学者です。彼は、<strong>「人工知能 (Artificial Intelligence, AI)」</strong> という分野の創始者の一人であり、その命名者として、またAI研究の初期における多大な貢献によって、歴史にその名を刻んでいます。</p>
 <h3 id="ai">AIの命名とダートマス会議<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
-<p>マッカーシーの最も有名な功績は、1956年に開催された歴史的な<strong>ダートマス会議</strong>を主催し、その提案書の中で世界で初めて<strong>「人工知能 (AI)」</strong> という言葉を用いたことです。彼は、「考える機械」を作るという壮大な目標を掲げ、それまで散発的に行われていた関連研究を一つの学問分野として確立することに成功しました。</p>
+<p>マッカーシーの最も有名な功績は、1956年に開催された歴史的な<strong><a href="02_AIの歴史/02_ダートマス会議.md">ダートマス会議</a></strong>を主催し、その提案書の中で世界で初めて<strong>「人工知能 (AI)」</strong> という言葉を用いたことです。彼は、「考える機械」を作るという壮大な目標を掲げ、それまで散発的に行われていた関連研究を一つの学問分野として確立することに成功しました。</p>
 <p>この会議が、AIという学問分野の公式な誕生の瞬間とされています。マッカーシーは、AI研究の父の一人として、その後の発展に絶大な影響を与え続けました。</p>
 <h3 id="_2">主な業績と貢献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>マッカーシーの貢献は、AIの命名だけに留まりません。</p>
@@ -2121,5 +2130,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

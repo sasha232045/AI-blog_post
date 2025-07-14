@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1980,7 +1989,7 @@
 
 <p>難易度: 35</p>
 <h2 id="_1">知識獲得の困難さとは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>AI、特に初期の「エキスパートシステム」と呼ばれる分野で直面した、根源的かつ重大な課題、それが<strong>知識獲得の困難さ (Difficulty of Knowledge Acquisition)</strong>、または<strong>知識獲得のボトルネック (Knowledge Acquisition Bottleneck)</strong> です。</p>
+<p>AI、特に初期の「<a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a>」と呼ばれる分野で直面した、根源的かつ重大な課題、それが<strong>知識獲得の困難さ (Difficulty of Knowledge Acquisition)</strong>、または<strong>知識獲得のボトルネック (Knowledge Acquisition Bottleneck)</strong> です。</p>
 <p>これは、特定の専門分野における人間の専門家（エキスパート）が持つ知識、経験、そして暗黙知（言葉で説明しにくい直感やノウハウ）を、コンピューターが理解し、利用できる形式（知識ベース）に変換する作業が、極めて困難であるという問題を指します。</p>
 <h3 id="_2">なぜ知識獲得は困難なのか？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>人間の専門家は、膨大な知識を単に記憶しているだけではありません。彼らは、複雑な状況を認識し、矛盾する情報の中から最適な判断を下し、過去の経験から新たな解決策を導き出します。この思考プロセスには、言語化が難しい「暗黙知」や、文脈に依存した判断基準が数多く含まれています。</p>
@@ -1994,7 +2003,7 @@
 <h3 id="_3">エキスパートシステムの限界と教訓<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>この知識獲得のボトルネックが原因で、1980年代にブームとなったエキスパートシステムの多くは、開発が頓挫するか、ごく限られた範囲でしか実用化されませんでした。</p>
 <p>この課題は、AI開発における重要な教訓を残しました。それは、「人間から知識を抽出し、ルールとして記述する」というアプローチには限界があるということです。</p>
-<p>この反省が、後のAI研究を大きく方向転換させるきっかけの一つとなりました。具体的には、AI自らがデータの中からパターンやルールを自動で学習する「機械学習」のアプローチ、特に近年の「ディープラーニング」の発展へと繋がっていくのです。知識獲得の困難さという壁に突き当たったからこそ、AIは新たな進化の道を歩み始めたと言えるでしょう。</p>
+<p>この反省が、後のAI研究を大きく方向転換させるきっかけの一つとなりました。具体的には、AI自らがデータの中からパターンやルールを自動で学習する「<a href="01_AI基礎/02_機械学習.md"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>」のアプローチ、特に近年の「<a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a>」の発展へと繋がっていくのです。知識獲得の困難さという壁に突き当たったからこそ、AIは新たな進化の道を歩み始めたと言えるでしょう。</p>
 
 
 
@@ -2097,5 +2106,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

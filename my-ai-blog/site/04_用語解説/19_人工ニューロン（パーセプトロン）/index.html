@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2007,7 +2016,7 @@
 
 <p>難易度: 160</p>
 <h2 id="_1">人工ニューロン（パーセプトロン）とは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>人工ニューロン (Artificial Neuron)</strong> とは、人間の脳を構成する神経細胞である<strong>ニューロン (Neuron)</strong> の働きを、数学的なモデルで模倣したものです。これは、ニューラルネットワーク、ひいては現代のディープラーニングにおける、最も基本的な構成要素（ビルディングブロック）です。</p>
+<p><strong>人工ニューロン (Artificial Neuron)</strong> とは、人間の脳を構成する神経細胞である<strong>ニューロン (Neuron)</strong> の働きを、数学的なモデルで模倣したものです。これは、<a href="04_用語解説/01_ニューラルネットワーク.md"><abbr title="人間の脳の神経細胞のネットワークを模倣したコンピュータモデル">ニューラルネットワーク</abbr></a>、ひいては現代のディープラーニングにおける、最も基本的な構成要素（ビルディングブロック）です。</p>
 <p>その最も初期の、そして最も有名なモデルが、1957年にフランク・ローゼンブラットによって考案された<strong>パーセプトロン (Perceptron)</strong> です。</p>
 <h3 id="_2">人工ニューロン（パーセプトロン）の仕組み<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>パーセプトロンの構造は、比較的シンプルです。その動作は、以下のステップで説明できます。</p>
@@ -2138,5 +2147,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

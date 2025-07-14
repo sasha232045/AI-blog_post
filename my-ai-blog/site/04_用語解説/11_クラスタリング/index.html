@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,16 +2007,16 @@
 
 <p>難易度: 180</p>
 <h2 id="_1">クラスタリングとは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>クラスタリング (Clustering)</strong> とは、機械学習における<strong>教師なし学習 (Unsupervised Learning)</strong> の代表的な手法の一つです。その目的は、与えられたデータ群の中から、<strong>明確な正解ラベルがない状態</strong>で、データ同士の類似性に基づいて自然なグループ（=<strong>クラスタ</strong>）を発見することです。</p>
+<p><strong><a href="04_用語解説/11_クラスタリング.md"><abbr title="データを似た特徴を持つグループに分ける教師なし学習手法">クラスタリング</abbr></a> (Clustering)</strong> とは、機械学習における<strong><a href="04_用語解説/06_教師なし学習.md"><abbr title="正解ラベルなしでデータの構造やパターンを発見する機械学習手法">教師なし学習</abbr></a> (Unsupervised Learning)</strong> の代表的な手法の一つです。その目的は、与えられたデータ群の中から、<strong>明確な正解ラベルがない状態</strong>で、データ同士の類似性に基づいて自然なグループ（=<strong>クラスタ</strong>）を発見することです。</p>
 <p>例えば、顧客データを「購買傾向が似ているグループ」に分けたり、ウェブサイトの訪問者を「閲覧パターンが似ているグループ」に分類したり、遺伝子データから「機能が似ている遺伝子のグループ」を見つけ出したりする際に活用されます。</p>
 <h3 id="_2">クラスタリングの核心<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>クラスタリングの核心は、<strong>「同じクラスタ内のデータは互いに似ており、異なるクラスタのデータは互いに似ていない」</strong>という状態を目指す点にあります。</p>
 <p>この「類似性」をどのように定義するかが、クラスタリングのアルゴリズムにおいて重要な要素となります。一般的には、データ点間の<strong>距離</strong>が用いられます。ユークリッド距離（私たちが日常で使う直線距離）などが代表的です。距離が近ければ類似性が高く、遠ければ類似性が低いと判断されます。</p>
 <h3 id="_3">分類との違い<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>クラスタリングは、しばしば<strong>分類 (Classification)</strong> と混同されますが、両者には決定的な違いがあります。</p>
+<p>クラスタリングは、しばしば<strong><a href="04_用語解説/08_分類.md"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a> (Classification)</strong> と混同されますが、両者には決定的な違いがあります。</p>
 <ul>
 <li><strong>クラスタリング (Clustering)</strong>: <strong>正解ラベルがない</strong>データから、構造やパターンを見つけ出し、グループを<strong>発見</strong>する。（教師なし学習）</li>
-<li><strong>分類 (Classification)</strong>: <strong>正解ラベルが付与された</strong>データ（教師データ）を基に学習し、未知のデータがどのカテゴリに属するかを<strong>予測</strong>する。（教師あり学習）</li>
+<li><strong>分類 (Classification)</strong>: <strong>正解ラベルが付与された</strong>データ（教師データ）を基に学習し、未知のデータがどのカテゴリに属するかを<strong>予測</strong>する。（<a href="04_用語解説/05_教師あり学習.md"><abbr title="正解ラベルが付いたデータを使ってモデルを学習させる機械学習手法">教師あり学習</abbr></a>）</li>
 </ul>
 <p>例えるなら、たくさんの種類の果物が混ざったカゴを渡され、「これを適当なグループに分けてください」と言われるのがクラスタリングです。リンゴ、オレンジ、ブドウといったグループに分けるかもしれません。一方、「これがリンゴ、これがオレンジです」という見本をいくつか見せられた後で、「では、この新しい果物は何ですか？」と問われるのが分類です。</p>
 <h3 id="_4">主なクラスタリング手法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -2121,5 +2130,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

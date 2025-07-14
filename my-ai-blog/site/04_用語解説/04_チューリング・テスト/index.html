@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -68,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#turing-test" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -998,6 +1007,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1030,6 +1041,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1038,16 +1051,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      チューリング・テストとは：機械が「考える」かを測る試金石
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="チューリング・テストとは：機械が「考える」かを測る試金石">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       1. チューリング・テストの概要
@@ -1055,8 +1058,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       2. チューリング・テストの意義と限界
@@ -1067,7 +1070,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       意義
     </span>
@@ -1076,7 +1079,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       限界と批判
     </span>
@@ -1088,18 +1091,13 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2009,10 +2007,8 @@
 
 
 
-  <h1>チューリング・テスト</h1>
-
+<h1 id="turing-test">チューリング・テストとは：機械が「考える」かを測る試金石<a class="headerlink" href="#turing-test" title="Permanent link">&para;</a></h1>
 <p>難易度: 80</p>
-<h2 id="_1">チューリング・テストとは：機械が「考える」かを測る試金石<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>AI（人工知能）の定義を考える上で、しばしば引き合いに出されるのが「チューリング・テスト (Turing Test)」です。これは、コンピュータが人間のような知的な振る舞いができるかどうかを判断するための、アラン・チューリングによって考案された思考実験です。AIが真に「考える」ことができるのか、あるいは単に人間を模倣しているに過ぎないのかという、根源的な問いに迫る試金石として、現在でも議論の対象となっています。</p>
 <h3 id="1">1. チューリング・テストの概要<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>チューリング・テストは、以下のような設定で行われます。</p>
@@ -2023,13 +2019,13 @@
 </ul>
 <p>チューリング自身は、このテストを「模倣ゲーム」と呼び、コンピュータが人間を「だます」ことができるかどうかに焦点を当てました。彼は、コンピュータが人間と区別できないほど賢く振る舞えるならば、哲学的な意味での「思考」の有無を問うことは無意味である、と考えたのです。</p>
 <h3 id="2">2. チューリング・テストの意義と限界<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<h4 id="_2">意義<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_1">意義<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>AI研究の目標設定</strong>: チューリング・テストは、AI研究者にとって、人間のような知能を持つ機械を開発するという具体的な目標を与えました。</li>
 <li><strong>哲学的な議論の促進</strong>: 「知能とは何か」「意識とは何か」といった、AIが持つべき能力や、人間と機械の違いに関する哲学的な議論を活発化させました。</li>
 <li><strong>実用的なAI開発への影響</strong>: テストの合格を目指す過程で、自然言語処理、知識表現、推論、学習といった、AIの様々な要素技術が発展しました。</li>
 </ul>
-<h4 id="_3">限界と批判<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_2">限界と批判<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>しかし、チューリング・テストには多くの批判や限界も指摘されています。</p>
 <ol>
 <li><strong>「思考」の定義の曖昧さ</strong>: テストは「人間のように振る舞う」ことに焦点を当てており、実際に「思考」しているかどうかを直接測るものではありません。単に巧妙なプログラムであれば、思考していなくても合格できてしまう可能性があります。</li>
@@ -2038,7 +2034,7 @@
 <li><strong>人間中心主義</strong>: 人間の知能を唯一の基準としているため、人間とは異なる形の知能を持つAIの可能性を見落とす可能性があります。</li>
 <li><strong>テストの回避</strong>: AIがテストに合格するために、人間らしい間違いを意図的にしたり、会話を逸らしたりするなど、本質的な知能とは関係ない「ごまかし」を行う可能性も指摘されています。</li>
 </ol>
-<h3 id="_4">まとめ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_3">まとめ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>チューリング・テストは、AIが人間のような知的な振る舞いができるかを測るための画期的な試金石として、AI研究の初期に大きな影響を与えました。その意義は、AI研究に具体的な目標を与え、知能に関する哲学的な議論を深めた点にあります。</p>
 <p>しかし、「思考」の定義の曖昧さや「中国語の部屋」論証に代表されるように、その限界もまた広く認識されています。現代のAI研究では、チューリング・テストの合格だけを目標とするのではなく、特定のタスクにおける性能向上や、AIの安全性、倫理といった、より多角的な視点からAIの知能を評価するアプローチが主流となっています。それでもなお、チューリング・テストは、AIと人間の知能の関係を考える上で、重要な出発点であり続けています。</p>
 
@@ -2143,5 +2139,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

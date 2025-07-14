@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2013,7 +2022,7 @@
 
 <p>難易度: 35</p>
 <h2 id="inference-engine">推論エンジンとは (Inference Engine)<a class="headerlink" href="#inference-engine" title="Permanent link">&para;</a></h2>
-<p><strong>推論エンジン (Inference Engine)</strong> とは、人工知能 (AI) システム、特に「エキスパートシステム」と呼ばれる分野で中心的な役割を担うプログラムのことです。その本質は、専門家が持つ知識やルールをコンピュータ上で再現し、それらを用いて未知の問いに対して論理的な結論を自動的に導き出す「頭脳」部分と言えます。</p>
+<p><strong>推論エンジン (Inference Engine)</strong> とは、人工知能 (AI) システム、特に「<a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a>」と呼ばれる分野で中心的な役割を担うプログラムのことです。その本質は、専門家が持つ知識やルールをコンピュータ上で再現し、それらを用いて未知の問いに対して論理的な結論を自動的に導き出す「頭脳」部分と言えます。</p>
 <h3 id="_1">推論エンジンの基本的な仕組み<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>推論エンジンは、大きく分けて2つの主要な要素と連携して動作します。</p>
 <ol>
@@ -2145,5 +2154,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

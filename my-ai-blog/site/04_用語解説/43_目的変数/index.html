@@ -54,7 +54,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1987,41 +1996,41 @@
 
 <p>難易度: 25</p>
 <h2 id="objective-variable">目的変数とは (Objective Variable)<a class="headerlink" href="#objective-variable" title="Permanent link">&para;</a></h2>
-<p><strong>目的変数（もくてきへんすう）</strong>とは、統計学や[機械学習]のモデルにおいて、<strong>予測したい</strong>、あるいは<strong>説明したい</strong>対象となる「<strong>結果</strong>」の変数のことです。<strong>応答変数（Response Variable）</strong>、<strong>従属変数（Dependent Variable）</strong>、あるいは[機械学習]の文脈では<strong>ターゲット（Target）</strong>や<strong>ラベル（Label）</strong>とも呼ばれます。</p>
+<p><strong>目的変数（もくてきへんすう）</strong>とは、統計学や<a class="wikilink" href="/機械学習/"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>のモデルにおいて、<strong>予測したい</strong>、あるいは<strong>説明したい</strong>対象となる「<strong>結果</strong>」の変数のことです。<strong>応答変数（Response Variable）</strong>、<strong>従属変数（Dependent Variable）</strong>、あるいは<a class="wikilink" href="/機械学習/"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>の文脈では<strong>ターゲット（Target）</strong>や<strong>ラベル（Label）</strong>とも呼ばれます。</p>
 <h3 id="_1">目的変数の役割<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>予測モデルは、ある「結果」が、どのような「要因」によって引き起こされるのか、その関係性を明らかにしようとします。このとき、</p>
 <ul>
 <li><strong>結果</strong>に相当するのが「<strong>目的変数</strong>」</li>
-<li><strong>要因</strong>に相当するのが「<strong>[説明変数]</strong>」</li>
+<li><strong>要因</strong>に相当するのが「<strong><a class="wikilink" href="/説明変数/"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a></strong>」</li>
 </ul>
 <p>となります。つまり、目的変数は、私たちが最も知りたいと願う「答え」そのものです。</p>
 <p>例えば、「学生のテストの成績」を予測するモデルを考えてみましょう。</p>
 <ul>
 <li><strong>目的変数</strong>: テストの成績</li>
-<li><strong>説明変数</strong>: 勉強時間、睡眠時間、過去の成績、通学時間など</li>
+<li><strong><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></strong>: 勉強時間、睡眠時間、過去の成績、通学時間など</li>
 </ul>
-<p>このモデルの目的は、様々な要因（[説明変数]）が、最終的に「テストの成績」という目的変数にどのような影響を与えるかを理解し、未来の成績を予測することです。</p>
+<p>このモデルの目的は、様々な要因（<a class="wikilink" href="/説明変数/"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a>）が、最終的に「テストの成績」という目的変数にどのような影響を与えるかを理解し、未来の成績を予測することです。</p>
 <h3 id="_2">目的変数の種類<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>目的変数の性質によって、解くべき問題の種類が大きく異なります。</p>
 <ol>
 <li>
 <p><strong>連続変数（Continuous Variable）</strong>
-    目的変数が、切れ目のない連続した数値を取る場合です。この場合、タスクは「<strong>[回帰]（Regression）</strong>」と呼ばれます。</p>
+    目的変数が、切れ目のない連続した数値を取る場合です。この場合、タスクは「<strong><a class="wikilink" href="/回帰/"><abbr title="連続値を予測する教師あり学習タスク">回帰</abbr></a>（Regression）</strong>」と呼ばれます。</p>
 <ul>
 <li><strong>例</strong>: 株価、気温、身長、売上高、住宅価格など。</li>
 </ul>
 </li>
 <li>
 <p><strong>カテゴリカル変数（Categorical Variable）</strong>
-    目的変数が、いくつかのカテゴリのいずれかを取る場合です。この場合、タスクは「<strong>[分類]（Classification）</strong>」と呼ばれます。</p>
+    目的変数が、いくつかのカテゴリのいずれかを取る場合です。この場合、タスクは「<strong><a class="wikilink" href="/分類/"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a>（Classification）</strong>」と呼ばれます。</p>
 <ul>
 <li><strong>例</strong>: 「購入する／しない」、「スパム／非スパム」、「犬／猫／鳥」、「Aクラス／Bクラス／Cクラス」など。</li>
 </ul>
 </li>
 </ol>
-<p>このように、どのような変数を「目的変数」として設定するかによって、適用すべき分析手法（[回帰]モデルか、[分類]モデルか）が決定されます。</p>
+<p>このように、どのような変数を「目的変数」として設定するかによって、適用すべき分析手法（<a class="wikilink" href="/回帰/"><abbr title="連続値を予測する教師あり学習タスク">回帰</abbr></a>モデルか、<a class="wikilink" href="/分類/"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a>モデルか）が決定されます。</p>
 <h3 id="_3">まとめ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>目的変数は、データ分析や[機械学習]プロジェクトにおける「ゴール」そのものです。何を予測し、何を明らかにしたいのかを明確に定義し、それを目的変数として設定することが、分析の第一歩となります。この目的変数を、どのような[説明変数]を使って、どれだけ正確に予測できるか、という挑戦が、データサイエンスの核心的なテーマの一つなのです。</p>
+<p>目的変数は、データ分析や<a class="wikilink" href="/機械学習/"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>プロジェクトにおける「ゴール」そのものです。何を予測し、何を明らかにしたいのかを明確に定義し、それを目的変数として設定することが、分析の第一歩となります。この目的変数を、どのような<a class="wikilink" href="/説明変数/"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a>を使って、どれだけ正確に予測できるか、という挑戦が、データサイエンスの核心的なテーマの一つなのです。</p>
 
 
 
@@ -2108,5 +2117,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1990,7 +1999,7 @@
 <p>難易度: 250</p>
 <h2 id="alexnet">AlexNetとは<a class="headerlink" href="#alexnet" title="Permanent link">&para;</a></h2>
 <p><strong>AlexNet (アレックスネット)</strong> とは、2012年に開催された高名な画像認識コンペティション <strong>ILSVRC (ImageNet Large Scale Visual Recognition Challenge)</strong> で、他のモデルを圧倒的な差で打ち破り、優勝した<strong>畳み込みニューラルネットワーク (Convolutional Neural Network, CNN)</strong> のモデル名です。</p>
-<p>この出来事は、AI研究の歴史において一つの転換点と見なされており、今日の<strong>第三次AIブーム</strong>および<strong>ディープラーニング (Deep Learning)</strong> の時代の幕開けを象徴する出来事となりました。</p>
+<p>この出来事は、AI研究の歴史において一つの転換点と見なされており、今日の<strong>第三次AIブーム</strong>および<strong><a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a> (Deep Learning)</strong> の時代の幕開けを象徴する出来事となりました。</p>
 <h3 id="alexnet_1">AlexNetの革新性<a class="headerlink" href="#alexnet_1" title="Permanent link">&para;</a></h3>
 <p>AlexNetの成功は、単に既存の手法を改良しただけのものではありませんでした。以下のようないくつかの重要な技術的革新を組み合わせることで、当時の画像認識の精度を飛躍的に向上させました。</p>
 <ol>
@@ -1998,7 +2007,7 @@
 <p><strong>大規模な畳み込みニューラルネットワーク (CNN) の採用</strong>: AlexNetは、5つの畳み込み層と3つの全結合層からなる、当時としては非常に深い（層の数が多い）ニューラルネットワークでした。この深い構造が、画像からより複雑で抽象的な特徴を抽出することを可能にしました。</p>
 </li>
 <li>
-<p><strong>GPUによる高速計算</strong>: ディープラーニングの学習には膨大な計算量が必要です。AlexNetの開発チームは、本来は画像描画のために使われる<strong>GPU (Graphics Processing Unit)</strong> を数値計算に応用することで、学習時間を劇的に短縮することに成功しました。この「GPUの活用」は、その後のディープラーニング研究における標準的なアプローチとなりました。</p>
+<p><strong>GPUによる高速計算</strong>: ディープラーニングの学習には膨大な計算量が必要です。AlexNetの開発チームは、本来は画像描画のために使われる<strong><a href="04_用語解説/13_GPU.md"><abbr title="Graphics Processing Unit（グラフィックス処理装置）- 深層学習の計算処理を高速化する専用チップ">GPU</abbr></a> (Graphics Processing Unit)</strong> を数値計算に応用することで、学習時間を劇的に短縮することに成功しました。この「GPUの活用」は、その後のディープラーニング研究における標準的なアプローチとなりました。</p>
 </li>
 <li>
 <p><strong>活性化関数としてのReLUの採用</strong>: それまでのニューラルネットワークでは、活性化関数として<strong>シグモイド関数 (Sigmoid function)</strong> などが主に使われていました。しかし、これらの関数は層が深くなると学習が停滞してしまう<strong>勾配消失問題</strong>という課題を抱えていました。AlexNetは、<strong>ReLU (Rectified Linear Unit)</strong> という新しい活性化関数を採用することで、この問題を回避し、高速かつ効率的な学習を実現しました。</p>
@@ -2114,5 +2123,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

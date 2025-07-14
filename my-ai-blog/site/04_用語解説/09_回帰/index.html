@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,9 +2007,9 @@
 
 <p>難易度: 28</p>
 <h2 id="ai">回帰とは：連続する数値を予測するAIの技術<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>前回の「分類」がデータを特定のカテゴリに仕分けるタスクであったのに対し、今回解説する「回帰（Regression）」は、<strong>連続する数値を予測する</strong>ことを目的とした、もう一つの重要な「教師あり学習」のタスクです。株価の予測から天気予報まで、私たちの生活に密接に関わる多くの予測は、この回帰の技術によって支えられています。</p>
+<p>前回の「<a href="04_用語解説/08_分類.md"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a>」がデータを特定のカテゴリに仕分けるタスクであったのに対し、今回解説する「<a href="04_用語解説/09_回帰.md"><abbr title="連続値を予測する教師あり学習タスク">回帰</abbr></a>（Regression）」は、<strong>連続する数値を予測する</strong>ことを目的とした、もう一つの重要な「<a href="04_用語解説/05_教師あり学習.md"><abbr title="正解ラベルが付いたデータを使ってモデルを学習させる機械学習手法">教師あり学習</abbr></a>」のタスクです。株価の予測から天気予報まで、私たちの生活に密接に関わる多くの予測は、この回帰の技術によって支えられています。</p>
 <h3 id="_1">回帰の基本的な考え方<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>回帰の目的は、ある入力データ（説明変数）と、それに対応する連続的な数値データ（目的変数）の関係性を数式モデルで表現することです。AIは、事前に与えられた大量の入力データと正解の数値のペアを学習し、その背後にある相関関係やパターンを捉えます。この学習により、AIは未知の入力データに対しても、妥当な数値を予測できるようになります。</p>
+<p>回帰の目的は、ある入力データ（<a href="04_用語解説/42_説明変数.md"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a>）と、それに対応する連続的な数値データ（<a href="04_用語解説/43_目的変数.md"><abbr title="予測したい対象の出力変数（従属変数）">目的変数</abbr></a>）の関係性を数式モデルで表現することです。AIは、事前に与えられた大量の入力データと正解の数値のペアを学習し、その背後にある相関関係やパターンを捉えます。この学習により、AIは未知の入力データに対しても、妥当な数値を予測できるようになります。</p>
 <p>例えば、「不動産価格の予測」は典型的な回帰問題です。</p>
 <ul>
 <li><strong>入力データ（説明変数）</strong>: 物件の広さ、部屋数、駅からの距離、築年数など。</li>
@@ -2019,7 +2028,7 @@
 <ul>
 <li><strong>線形回帰 (Linear Regression)</strong>: 最もシンプルで基本的な回帰アルゴリズム。入力変数と出力変数の間に直線的な関係（比例関係）を仮定します。例えば、「部屋が1平方メートル広くなると、価格が〇円上がる」といったモデルです。</li>
 <li><strong>非線形回帰 (Non-linear Regression)</strong>: 変数間の関係が直線的でない、より複雑なケースに対応します。多項式回帰やサポートベクター回帰（SVR）などがあります。</li>
-<li><strong>決定木</strong>や<strong>ニューラルネットワーク</strong>: これらのアルゴリズムは、分類だけでなく回帰問題にも応用することができ、複雑な非線形関係を捉えるのに優れています。</li>
+<li><strong>決定木</strong>や<strong><a href="04_用語解説/01_ニューラルネットワーク.md"><abbr title="人間の脳の神経細胞のネットワークを模倣したコンピュータモデル">ニューラルネットワーク</abbr></a></strong>: これらのアルゴリズムは、分類だけでなく回帰問題にも応用することができ、複雑な非線形関係を捉えるのに優れています。</li>
 </ul>
 <h3 id="_4">まとめ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>「回帰」は、過去のデータから未来の数値を予測するための強力なツールです。ビジネスにおける売上予測、金融市場での株価予測、気象学における気温予測など、その応用範囲は枚挙にいとまがありません。データに基づいた定量的な意思決定が求められる現代社会において、回帰分析は不可欠な技術と言えるでしょう。一見複雑に見える現象の背後にある法則性を見つけ出し、未来を予測する。これが回帰というタスクの醍醐味です。</p>
@@ -2125,5 +2134,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

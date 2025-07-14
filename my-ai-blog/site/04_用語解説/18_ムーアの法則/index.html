@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2027,7 +2036,7 @@
 <p>ムーアの法則の終焉は、コンピュータの性能向上の終わりを意味するわけではありません。</p>
 <p>現在、研究者や技術者は、トランジスタの微細化という単一の道筋に頼るのではなく、以下のような新しいアプローチによって、計算能力の向上を目指しています。</p>
 <ul>
-<li><strong>新しいアーキテクチャ</strong>: <strong>GPU (Graphics Processing Unit)</strong> のように、特定の計算（並列計算）に特化したプロセッサの活用。</li>
+<li><strong>新しいアーキテクチャ</strong>: <strong><a href="04_用語解説/13_GPU.md"><abbr title="Graphics Processing Unit（グラフィックス処理装置）- 深層学習の計算処理を高速化する専用チップ">GPU</abbr></a> (Graphics Processing Unit)</strong> のように、特定の計算（並列計算）に特化したプロセッサの活用。</li>
 <li><strong>3次元実装</strong>: チップを平面的に並べるだけでなく、垂直方向に積み重ねることで集積度を高める技術。</li>
 <li><strong>新しい材料</strong>: シリコンに代わる、より効率的な新しい半導体材料の研究。</li>
 <li><strong>量子コンピューティング</strong>: 従来のコンピュータとは全く異なる原理で動作する、次世代のコンピュータ技術。</li>
@@ -2136,5 +2145,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

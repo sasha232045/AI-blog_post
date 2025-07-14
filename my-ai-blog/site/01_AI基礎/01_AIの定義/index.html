@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -68,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ai" class="md-skip">
+        <a href="#ai-definition" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -389,6 +398,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -421,6 +432,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -429,16 +442,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      AIの定義とは：人工知能の多様な側面を理解する
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AIの定義とは：人工知能の多様な側面を理解する">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#1-ai4" class="md-nav__link">
     <span class="md-ellipsis">
       1. AIの定義：4つの視点
@@ -446,8 +449,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#2-aiaiai" class="md-nav__link">
     <span class="md-ellipsis">
       2. AIの分類：「強いAI」と「弱いAI」
@@ -455,18 +458,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1985,12 +1983,10 @@
 
 
 
-  <h1>AIの定義</h1>
-
+<h1 id="ai-definition">AIの定義とは：人工知能の多様な側面を理解する<a class="headerlink" href="#ai-definition" title="Permanent link">&para;</a></h1>
 <p>難易度: 5</p>
-<h2 id="ai">AIの定義とは：人工知能の多様な側面を理解する<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>現代社会において、私たちは「AI」という言葉を日常的に見聞きします。スマートフォンの音声アシスタントから、自動運転技術、医療診断の支援システムまで、AIは様々な分野でその存在感を増しています。しかし、「AIとは何か？」と問われると、明確に答えるのは意外と難しいものです。それもそのはず、AIには単一の確立された定義が存在せず、研究者や専門家の立場によって、その捉え方が少しずつ異なるからです。</p>
-<p>本記事では、AIという概念の多面的な性質を理解するために、その代表的な定義や分類について解説します。</p>
+<p>現代社会において、私たちは「<abbr title="Artificial Intelligence（人工知能）- コンピュータによって実現される人間のような知的動作や問題解決能力">AI</abbr>」という言葉を日常的に見聞きします。スマートフォンの音声アシスタントから、自動運転技術、医療診断の支援システムまで、AIは様々な分野でその存在感を増しています。しかし、「AIとは何か？」と問われると、明確に答えるのは意外と難しいものです。それもそのはず、AIには単一の確立された定義が存在せず、研究者や専門家の立場によって、その捉え方が少しずつ異なるからです。</p>
+<p>本記事では、AIという概念の多面的な性質を理解するために、その代表的な定義や<a href="../../04_%E7%94%A8%E8%AA%9E%E8%A7%A3%E8%AA%AC/08_%E5%88%86%E9%A1%9E/">分類</a>について解説します。</p>
 <h3 id="1-ai4">1. AIの定義：4つの視点<a class="headerlink" href="#1-ai4" title="Permanent link">&para;</a></h3>
 <p>AIの定義は、大きく分けて以下の4つの視点から整理することができます。</p>
 <ol>
@@ -2006,7 +2002,7 @@
 <p><strong>人間のように振る舞う (Acting Humanly)</strong></p>
 <ul>
 <li><strong>目標</strong>: コンピュータが、人間と見分けがつかないほど自然な振る舞いをすること。</li>
-<li><strong>アプローチ</strong>: 有名な「[チューリング・テスト]」がこの視点の代表例です。人間がコンピュータと対話し、相手が人間かコンピュータか判断できなければ、そのコンピュータは知的であるとみなされます。</li>
+<li><strong>アプローチ</strong>: 有名な「<a href="../../04_%E7%94%A8%E8%AA%9E%E8%A7%A3%E8%AA%AC/04_%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%B9%E3%83%88/"><abbr title="機械が人間と区別のつかない会話能力を持つかどうかを判定するテスト">チューリング・テスト</abbr></a>」がこの視点の代表例です。人間がコンピュータと対話し、相手が人間かコンピュータか判断できなければ、そのコンピュータは知的であるとみなされます。</li>
 <li><strong>例</strong>: チャットボットが、人間と自然な会話を続ける。</li>
 </ul>
 </li>
@@ -2032,34 +2028,23 @@
 <p>もう一つの重要な分類として、「強いAI」と「弱いAI」という考え方があります。</p>
 <ul>
 <li>
-<p><strong>強いAI (Strong AI)</strong></p>
+<p><strong>強いAI (Strong <abbr title="Artificial Intelligence（人工知能）- コンピュータによって実現される人間のような知的動作や問題解決能力">AI</abbr>)</strong></p>
 <ul>
 <li><strong>定義</strong>: 人間と同等、あるいはそれ以上の知性や意識、自己認識を持つ、汎用的なAI。特定のタスクに限定されず、人間のようにあらゆる知的作業をこなすことができます。</li>
 <li><strong>現状</strong>: 現時点では、強いAIはまだ実現されていません。SF映画に登場するような、人間と対等に会話したり、感情を理解したりするAIは、この「強いAI」に分類されます。</li>
 </ul>
 </li>
 <li>
-<p><strong>弱いAI (Weak AI) / 特化型AI (Narrow AI)</strong></p>
+<p><strong>弱いAI (Weak <abbr title="Artificial Intelligence（人工知能）- コンピュータによって実現される人間のような知的動作や問題解決能力">AI</abbr>) / 特化型AI (Narrow <abbr title="Artificial Intelligence（人工知能）- コンピュータによって実現される人間のような知的動作や問題解決能力">AI</abbr>)</strong></p>
 <ul>
 <li><strong>定義</strong>: 特定のタスクに特化して、その範囲内で人間と同等かそれ以上の能力を発揮するAI。</li>
-<li><strong>現状</strong>: 現在、私たちが利用しているAIのほとんどが、この「弱いAI」です。画像認識、音声認識、<sup id="fnref:機械学習"><a class="footnote-ref" href="#fn:機械学習">1</a></sup>、機械翻訳、囲碁やチェスなど、特定の領域で驚異的な性能を示しています。</li>
+<li><strong>現状</strong>: 現在、私たちが利用しているAIのほとんどが、この「弱いAI」です。画像認識、音声認識、<a href="../02_%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>、機械翻訳、囲碁やチェスなど、特定の領域で驚異的な性能を示しています。</li>
 </ul>
 </li>
 </ul>
 <h3 id="_1">まとめ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>AIの定義は一つではなく、その研究の目的やアプローチによって様々に解釈されています。「人間のように思考・行動する」ことを目指すのか、それとも「合理的に思考・行動する」ことを目指すのか。また、その能力は特定のタスクに特化した「弱いAI」なのか、人間のような汎用性を持つ「強いAI」なのか。</p>
 <p>これらの多様な視点を理解することは、AIという技術の可能性と限界を正しく認識し、今後の社会との関わり方を考えていく上で、非常に重要な第一歩となるでしょう。</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:機械学習">
-<p>コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術のこと。&#160;<a class="footnote-backref" href="#fnref:機械学習" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:ディープラーニング">
-<p>深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法の一つ。&#160;<a class="footnote-backref" href="#fnref:ディープラーニング" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
 
 
 
@@ -2162,5 +2147,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

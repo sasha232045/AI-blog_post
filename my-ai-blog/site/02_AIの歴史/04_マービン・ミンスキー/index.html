@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,9 +2007,9 @@
 
 <p>難易度: 95</p>
 <h2 id="_1">マービン・ミンスキーとは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>マービン・ミンスキー (Marvin Minsky, 1927-2016)</strong> は、アメリカの計算機科学者であり、認知科学者です。ジョン・マッカーシーらと共に<strong>「人工知能 (Artificial Intelligence, AI)」</strong> という分野を創設した「父」の一人と見なされており、その独創的なアイデアと理論で、AI研究の黎明期から長年にわたり絶大な影響力を持ち続けました。</p>
+<p><strong><a href="02_AIの歴史/04_マービン・ミンスキー.md">マービン・ミンスキー</a> (Marvin Minsky, 1927-2016)</strong> は、アメリカの計算機科学者であり、認知科学者です。ジョン・マッカーシーらと共に<strong>「人工知能 (Artificial Intelligence, AI)」</strong> という分野を創設した「父」の一人と見なされており、その独創的なアイデアと理論で、AI研究の黎明期から長年にわたり絶大な影響力を持ち続けました。</p>
 <h3 id="ai">AI研究のパイオニアとして<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
-<p>ミンスキーは、1956年の歴史的な<strong>ダートマス会議</strong>に主要なメンバーとして参加し、AIという学問分野の創設に深く関わりました。その後、1959年にはジョン・マッカーシーと共にマサチューセッツ工科大学（MIT）に<strong>AI研究所（現在のCSAILの前身）</strong>を設立し、AI研究の世界的な中心地として育て上げました。</p>
+<p>ミンスキーは、1956年の歴史的な<strong><a href="02_AIの歴史/02_ダートマス会議.md">ダートマス会議</a></strong>に主要なメンバーとして参加し、AIという学問分野の創設に深く関わりました。その後、1959年にはジョン・マッカーシーと共にマサチューセッツ工科大学（MIT）に<strong>AI研究所（現在のCSAILの前身）</strong>を設立し、AI研究の世界的な中心地として育て上げました。</p>
 <p>彼の研究スタイルは、特定の技術開発に留まらず、「知能とは何か」という根源的な問いを探求する、哲学的かつ認知科学的なアプローチを特徴としていました。</p>
 <h3 id="_2">主な業績と貢献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>ミンスキーの貢献は多岐にわたりますが、特に以下の業績が知られています。</p>
@@ -2121,5 +2130,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

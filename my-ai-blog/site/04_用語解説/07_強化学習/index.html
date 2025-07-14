@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2007,7 +2016,7 @@
 
 <p>難易度: 50</p>
 <h2 id="ai">強化学習とは：AIが試行錯誤から最適な行動を学ぶ<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>これまで「教師あり学習」と「教師なし学習」という、機械学習の代表的な2つのアプローチを見てきました。今回は、それらとはまた異なるパラダイムを持つ「強化学習（Reinforcement Learning）」について解説します。これは、AIがまるで動物のように、自らの行動と、その結果得られる「報酬」を通じて、最適な行動戦略を学習していく方法です。</p>
+<p>これまで「<a href="04_用語解説/05_教師あり学習.md"><abbr title="正解ラベルが付いたデータを使ってモデルを学習させる機械学習手法">教師あり学習</abbr></a>」と「<a href="04_用語解説/06_教師なし学習.md"><abbr title="正解ラベルなしでデータの構造やパターンを発見する機械学習手法">教師なし学習</abbr></a>」という、機械学習の代表的な2つのアプローチを見てきました。今回は、それらとはまた異なるパラダイムを持つ「<a href="04_用語解説/07_強化学習.md"><abbr title="環境との相互作用を通じて最適な行動を学習する機械学習手法">強化学習</abbr></a>（Reinforcement Learning）」について解説します。これは、AIがまるで動物のように、自らの行動と、その結果得られる「報酬」を通じて、最適な行動戦略を学習していく方法です。</p>
 <h3 id="_1">強化学習の核心：報酬を最大化するエージェント<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>強化学習は、以下の5つの主要な要素から構成されるフレームワークで考えます。</p>
 <ol>
@@ -2142,5 +2151,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

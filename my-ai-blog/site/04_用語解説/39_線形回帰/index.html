@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,7 +2007,7 @@
 
 <p>難易度: 30</p>
 <h2 id="linear-regression">線形回帰とは (Linear Regression)<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h2>
-<p><strong>線形回帰 (Linear Regression)</strong> とは、統計学や機械学習の分野で最も基本的かつ広く用いられる予測モデルの一つです。その目的は、一つまたは複数の<strong>説明変数（Explanatory Variable）</strong>と、一つの連続的な<strong>目的変数（Objective Variable）</strong>との間に存在する<strong>直線的な関係（線形関係）</strong>をモデル化し、未知のデータに対する予測を行うことです。</p>
+<p><strong>線形回帰 (Linear Regression)</strong> とは、統計学や機械学習の分野で最も基本的かつ広く用いられる予測モデルの一つです。その目的は、一つまたは複数の<strong><a href="04_用語解説/42_説明変数.md"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a>（Explanatory Variable）</strong>と、一つの連続的な<strong><a href="04_用語解説/43_目的変数.md"><abbr title="予測したい対象の出力変数（従属変数）">目的変数</abbr></a>（Objective Variable）</strong>との間に存在する<strong>直線的な関係（線形関係）</strong>をモデル化し、未知のデータに対する予測を行うことです。</p>
 <p>中学校で学ぶ一次関数 <code>y = ax + b</code> を思い浮かべると、その本質を理解しやすくなります。</p>
 <h3 id="_1">線形回帰の基本的な考え方<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>線形回帰は、データポイントの分布を最もよく表現する一本の「最適」な直線を引こうと試みます。この直線のことを<strong>回帰直線</strong>と呼びます。</p>
@@ -2133,5 +2142,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

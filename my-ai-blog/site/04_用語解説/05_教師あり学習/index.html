@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,7 +2007,7 @@
 
 <p>難易度: 30</p>
 <h2 id="ai">教師あり学習とは：AIが「正解」から学ぶ仕組み<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>AI、特に機械学習の分野で最も広く使われている学習方法の一つが「教師あり学習（Supervised Learning）」です。これは、AIがまるで先生（教師）から手本と正解を教えてもらうかのように学習を進める方法です。今回は、この教師あり学習の基本的な概念と、その仕組みについて解説します。</p>
+<p>AI、特に機械学習の分野で最も広く使われている学習方法の一つが「<a href="04_用語解説/05_教師あり学習.md"><abbr title="正解ラベルが付いたデータを使ってモデルを学習させる機械学習手法">教師あり学習</abbr></a>（Supervised Learning）」です。これは、AIがまるで先生（教師）から手本と正解を教えてもらうかのように学習を進める方法です。今回は、この教師あり学習の基本的な概念と、その仕組みについて解説します。</p>
 <h3 id="_1">教師あり学習の核心：手本となる「正解データ」<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>教師あり学習の最大の特徴は、<strong>「入力データ」</strong>と<strong>「正解ラベル」</strong>がペアになったデータセットを使って学習する点にあります。</p>
 <ul>
@@ -2017,18 +2026,18 @@
 <h3 id="_3">教師あり学習の主な応用例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>教師あり学習は、その応用範囲の広さから、私たちの身の回りの多くの技術で活用されています。</p>
 <ul>
-<li><strong>分類 (Classification)</strong>: データをあらかじめ定義されたカテゴリに分けるタスクです。<ul>
+<li><strong><a href="04_用語解説/08_分類.md"><abbr title="データを事前に定義されたカテゴリに振り分ける教師あり学習タスク">分類</abbr></a> (Classification)</strong>: データをあらかじめ定義されたカテゴリに分けるタスクです。<ul>
 <li><strong>例</strong>: 画像認識（犬か猫か）、スパムメールフィルタ、医療診断（画像から病気の有無を判断）</li>
 </ul>
 </li>
-<li><strong>回帰 (Regression)</strong>: 連続する数値を予測するタスクです。<ul>
+<li><strong><a href="04_用語解説/09_回帰.md"><abbr title="連続値を予測する教師あり学習タスク">回帰</abbr></a> (Regression)</strong>: 連続する数値を予測するタスクです。<ul>
 <li><strong>例</strong>: 株価予測、不動産価格の予測、天気予報（明日の気温を予測）</li>
 </ul>
 </li>
 </ul>
 <h3 id="_4">まとめ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>教師あり学習は、明確な「正解」が存在する問題に対して非常に強力なアプローチです。AIに何を学習させたいかがはっきりしている場合に、質の高い学習データを大量に用意することで、人間を凌駕するほどの精度を持つAIモデルを構築することが可能です。一方で、正解ラベル付けされたデータを大量に準備するコストが高いという課題もあります。</p>
-<p>次回は、この教師あり学習と対をなすもう一つの主要な学習方法、「教師なし学習」について解説します。</p>
+<p>次回は、この教師あり学習と対をなすもう一つの主要な学習方法、「<a href="04_用語解説/06_教師なし学習.md"><abbr title="正解ラベルなしでデータの構造やパターンを発見する機械学習手法">教師なし学習</abbr></a>」について解説します。</p>
 
 
 
@@ -2131,5 +2140,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

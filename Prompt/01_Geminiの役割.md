@@ -1,6 +1,6 @@
 # この形式で実行できます
-gemini --model gemini-pro --prompt-file Gemini/00_MasterPrompt.md
-gemini --model gemini-pro --prompt-file Gemini/00_MasterPrompt.md --prompt-mode=disabled
+gemini --model gemini-pro --prompt-file Prompt/00_MasterPrompt.md
+gemini --model gemini-pro --prompt-file Prompt/00_MasterPrompt.md --prompt-mode=disabled
 
 
 # site作成

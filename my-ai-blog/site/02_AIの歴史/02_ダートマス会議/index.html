@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,10 +2007,10 @@
 
 <p>難易度: 80</p>
 <h2 id="_1">ダートマス会議とは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>ダートマス会議 (Dartmouth Summer Research Project on Artificial Intelligence)</strong> とは、1956年の夏に、アメリカのダートマス大学で開催された、約8週間にわたる歴史的なワークショップです。</p>
+<p><strong><a href="02_AIの歴史/02_ダートマス会議.md">ダートマス会議</a> (Dartmouth Summer Research Project on Artificial Intelligence)</strong> とは、1956年の夏に、アメリカのダートマス大学で開催された、約8週間にわたる歴史的なワークショップです。</p>
 <p>この会議は、<strong>「人工知能 (Artificial Intelligence, AI)」</strong> という学術分野が公式に誕生した瞬間として、AIの歴史において極めて重要な出来事と位置づけられています。</p>
 <h3 id="_2">会議の目的と提案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>この会議を主導したのは、当時ダートマス大学の若き数学者であった<strong>ジョン・マッカーシー (John McCarthy)</strong> です。彼は、マービン・ミンスキー、クロード・シャノン、ナサニエル・ロチェスターといった、当時すでに各分野で名を馳せていた研究者たちと共に、ロックフェラー財団に提案書を提出し、研究資金を獲得しました。</p>
+<p>この会議を主導したのは、当時ダートマス大学の若き数学者であった<strong><a href="02_AIの歴史/03_ジョン・マッカーシー.md">ジョン・マッカーシー</a> (John McCarthy)</strong> です。彼は、<a href="02_AIの歴史/04_マービン・ミンスキー.md">マービン・ミンスキー</a>、クロード・シャノン、ナサニエル・ロチェスターといった、当時すでに各分野で名を馳せていた研究者たちと共に、ロックフェラー財団に提案書を提出し、研究資金を獲得しました。</p>
 <p>その提案書には、歴史上初めて「人工知能」という言葉が使われ、以下のような野心的な目標が掲げられていました。</p>
 <blockquote>
 <p>「学習のあらゆる側面や、知能の他のいかなる特徴も、原則として非常に正確に記述することができるため、それらをシミュレートする機械（マシン）を作ることができる、という仮説に基づいて研究を進める。言語の使用、抽象化や概念の形成、人間の問題解決、そして自己改善といった、人間だけが持つ問題を機械に解かせることを試みる。」</p>
@@ -2127,5 +2136,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

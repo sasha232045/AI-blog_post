@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1989,7 +1998,7 @@
 
 <p>難易度: 250</p>
 <h2 id="qq-learning">Q学習（Q-Learning）とは<a class="headerlink" href="#qq-learning" title="Permanent link">&para;</a></h2>
-<p><strong>Q学習 (Q-Learning)</strong> とは、機械学習の一分野である<strong>強化学習 (Reinforcement Learning)</strong> における、代表的かつ基礎的なアルゴリズムの一つです。</p>
+<p><strong>Q学習 (Q-Learning)</strong> とは、機械学習の一分野である<strong><a href="04_用語解説/07_強化学習.md"><abbr title="環境との相互作用を通じて最適な行動を学習する機械学習手法">強化学習</abbr></a> (Reinforcement Learning)</strong> における、代表的かつ基礎的なアルゴリズムの一つです。</p>
 <p>Q学習の目的は、<strong>エージェント (Agent)</strong> と呼ばれる行動主体が、ある<strong>環境 (Environment)</strong> の中で、どの<strong>状態 (State)</strong> でどの<strong>行動 (Action)</strong> を取れば、将来的に得られる<strong>報酬 (Reward)</strong> の合計が最大化されるかを学習することです。このアルゴリズムは、環境のモデル（状態遷移の確率など）を事前に知らなくても学習を進められる、<strong>モデルフリー</strong>な手法であることが大きな特徴です。</p>
 <h3 id="qq">Q学習の核心：Q値（行動価値関数）<a class="headerlink" href="#qq" title="Permanent link">&para;</a></h3>
 <p>Q学習の「Q」は、<strong>Quality（品質）</strong> を意味します。アルゴリズムの中心となるのが、<strong>Q値 (Q-value)</strong> または<strong>行動価値関数 (Action-Value Function)</strong> と呼ばれる、<code>Q(s, a)</code> という関数です。</p>
@@ -2113,5 +2122,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

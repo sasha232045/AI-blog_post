@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1998,7 +2007,7 @@
 
 <p>難易度: 65</p>
 <h2 id="prospector-prospector">PROSPECTORとは (PROSPECTOR)<a class="headerlink" href="#prospector-prospector" title="Permanent link">&para;</a></h2>
-<p><strong>PROSPECTOR (プロスペクター)</strong> は、1970年代後半に米国のスタンフォード研究所 (SRI International) によって開発された、AIの歴史において金字塔と評される<strong>エキスパートシステム</strong>の一つです。その名前は「探鉱者」を意味し、その名の通り、<strong>鉱物資源の探査を支援する</strong>ことを目的として設計されました。</p>
+<p><strong>PROSPECTOR (プロスペクター)</strong> は、1970年代後半に米国のスタンフォード研究所 (SRI International) によって開発された、AIの歴史において金字塔と評される<strong><a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a></strong>の一つです。その名前は「探鉱者」を意味し、その名の通り、<strong>鉱物資源の探査を支援する</strong>ことを目的として設計されました。</p>
 <p>医療診断支援システムであったMYCINと並び、エキスパートシステムが現実世界の複雑な問題解決に有効であることを証明した、極めて重要な事例として知られています。</p>
 <h3 id="prospector">PROSPECTORの目的と機能<a class="headerlink" href="#prospector" title="Permanent link">&para;</a></h3>
 <p>PROSPECTORの主な目的は、地質学者が野外調査で収集した様々なデータ（岩石の種類、鉱物の分布、変質帯の状況など）を総合的に分析し、特定の種類の鉱床がその地域に存在する確率を評価することでした。</p>
@@ -2128,5 +2137,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

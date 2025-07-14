@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2011,7 +2020,7 @@
 <p><strong>共通の評価基準の提供</strong>: それまで、画像認識の研究は様々なデータセットや評価指標で個別に行われており、手法間の客観的な性能比較が困難でした。ILSVRCは、大規模かつ標準化されたデータセットと明確な評価基準を提供したことで、世界中の研究者が同じ土俵で公正に技術を競い合える場を創設しました。</p>
 </li>
 <li>
-<p><strong>ディープラーニングのブレークスルー</strong>: 2012年に、ジェフリー・ヒントン教授（当時トロント大学）のチームが開発した<strong>AlexNet</strong>が、従来の機械学習の手法を圧倒的な差で打ち破り優勝しました。この「AlexNetショック」をきっかけに、AI研究の主役は<strong>ディープラーニング (Deep Learning)</strong> へと完全に移行しました。</p>
+<p><strong>ディープラーニングのブレークスルー</strong>: 2012年に、ジェフリー・ヒントン教授（当時トロント大学）のチームが開発した<strong>AlexNet</strong>が、従来の機械学習の手法を圧倒的な差で打ち破り優勝しました。この「AlexNetショック」をきっかけに、AI研究の主役は<strong><a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a> (Deep Learning)</strong> へと完全に移行しました。</p>
 </li>
 <li>
 <p><strong>モデルアーキテクチャの進化</strong>: ILSVRCを勝ち抜くために、毎年、より深く、より効率的なネットワークアーキテクチャが次々と考案されました。2014年の<strong>GoogLeNet</strong>や<strong>VGGNet</strong>、2015年の<strong>ResNet (Residual Network)</strong> など、現在でも広く利用されている多くの有名なモデルは、このコンペティションから生まれています。事実、人間の画像認識能力のエラー率（約5%）を、2015年にResNetが初めて上回ったことは、AIの歴史における画期的な出来事でした。</p>
@@ -2124,5 +2133,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2007,7 +2016,7 @@
 
 <p>難易度: 110</p>
 <h2 id="_1">知識ベースとは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>知識ベース (Knowledge Base)</strong> とは、特定の専門分野に関する<strong>知識</strong>を、コンピュータが解釈・利用しやすいように、体系的に整理・蓄積したデータベースのことです。これは、1970年代から1980年代にかけて隆盛した、古典的なAIの一分野である<strong>エキスパートシステム</strong>の中核をなすコンポーネントです。</p>
+<p><strong>知識ベース (Knowledge Base)</strong> とは、特定の専門分野に関する<strong>知識</strong>を、コンピュータが解釈・利用しやすいように、体系的に整理・蓄積したデータベースのことです。これは、1970年代から1980年代にかけて隆盛した、古典的なAIの一分野である<strong><a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a></strong>の中核をなすコンポーネントです。</p>
 <h3 id="_2">知識ベースの中身：単なるデータではない「知識」<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>通常のデータベースが、個々の「<strong>データ</strong>」（例: <code>社員番号: 123, 氏名: 田中太郎, 年齢: 35</code>）の集合体を格納するのに対し、知識ベースが格納するのは、より抽象的で、汎用性の高い「<strong>知識</strong>」です。</p>
 <p>この「知識」は、主に<strong>ルール形式</strong>で表現されます。最も一般的なのは、「<strong>IF-THENルール</strong>」です。</p>
@@ -2152,5 +2161,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

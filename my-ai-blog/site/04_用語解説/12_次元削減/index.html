@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -1989,8 +1998,8 @@
 
 <p>難易度: 220</p>
 <h2 id="_1">次元削減とは<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>次元削減 (Dimensionality Reduction)</strong> とは、機械学習やデータ分析において、データの<strong>次元</strong>、すなわち<strong>特徴量の数</strong>を減らすための技術です。多くの特徴量を持つ高次元のデータを、その本質的な情報をできるだけ失うことなく、より低い次元のデータに変換することを目的とします。</p>
-<p>例えば、100種類の特徴量（説明変数）を持つ顧客データがあるとします。このデータは「100次元のデータ」と考えることができます。しかし、これらの特徴量の中には、互いに非常に似通った情報（例：「最終購入日」と「サイト最終訪問日」）や、予測にほとんど寄与しないノイズのような情報が含まれている可能性があります。次元削減は、このような冗長な、あるいは重要でない特徴量を削減・統合し、例えば「10次元」のデータに圧縮するような処理を指します。</p>
+<p><strong><a href="04_用語解説/12_次元削減.md"><abbr title="データの特徴量を減らしながら重要な情報を保持する手法">次元削減</abbr></a> (Dimensionality Reduction)</strong> とは、機械学習やデータ分析において、データの<strong>次元</strong>、すなわち<strong>特徴量の数</strong>を減らすための技術です。多くの特徴量を持つ高次元のデータを、その本質的な情報をできるだけ失うことなく、より低い次元のデータに変換することを目的とします。</p>
+<p>例えば、100種類の特徴量（<a href="04_用語解説/42_説明変数.md"><abbr title="予測や説明に使用する入力変数（独立変数）">説明変数</abbr></a>）を持つ顧客データがあるとします。このデータは「100次元のデータ」と考えることができます。しかし、これらの特徴量の中には、互いに非常に似通った情報（例：「最終購入日」と「サイト最終訪問日」）や、予測にほとんど寄与しないノイズのような情報が含まれている可能性があります。次元削減は、このような冗長な、あるいは重要でない特徴量を削減・統合し、例えば「10次元」のデータに圧縮するような処理を指します。</p>
 <h3 id="_2">なぜ次元削減が必要なのか？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>次元削減は、主に以下の問題を解決するために不可欠です。</p>
 <ol>
@@ -2123,5 +2132,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

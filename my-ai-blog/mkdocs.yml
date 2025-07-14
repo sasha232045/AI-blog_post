@@ -30,14 +30,15 @@ extra_css:
 # プラグインの設定
 plugins:
   - search
-  - autolinks
+  - glightbox
 
 # Markdown拡張機能
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: docs
   - pymdownx.superfences
   - admonition
   - attr_list
@@ -45,6 +46,14 @@ markdown_extensions:
   - toc:
       permalink: true
   - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - abbr
+  - wikilinks
 
 # ナビゲーション（目次）の設定
 # ここにフォルダ構造を記述すると、それがサイトのメニューになる

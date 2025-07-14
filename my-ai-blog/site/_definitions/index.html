@@ -20,7 +20,7 @@
     
     
       
-        <title>definitions - 私のAI学習ブログ</title>
+        <title>用語集 - 私のAI学習ブログ</title>
       
     
     
@@ -52,7 +52,16 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -62,6 +71,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -95,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-               definitions
+              用語集
             
           </span>
         </div>
@@ -1896,19 +1910,7 @@
 
 
 
-  <h1> definitions</h1>
-
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:機械学習">
-<p>コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術のこと。&#160;<a class="footnote-backref" href="#fnref:機械学習" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:ディープラーニング">
-<p>深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法の一つ。&#160;<a class="footnote-backref" href="#fnref:ディープラーニング" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h1 id="_1">用語集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 
 
 
@@ -1973,5 +1975,7 @@
       <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

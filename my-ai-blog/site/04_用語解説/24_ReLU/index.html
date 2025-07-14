@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2016,7 +2025,7 @@
 <p><strong>計算が非常に高速</strong>: ReLUの計算は、入力が正か負かを判断し、負であれば0にするだけです。かつて主流だった<strong>シグモイド関数</strong>が、複雑な指数計算を必要としたのと比較して、計算コストが劇的に低減されました。これにより、巨大なニューラルネットワークの学習時間を大幅に短縮することが可能になりました。</p>
 </li>
 <li>
-<p><strong>勾配消失問題の緩和</strong>: シグモイド関数が抱えていた最大の課題は、<strong>勾配消失問題</strong>でした。入力の絶対値が大きくなると勾配（傾き）が0に近づき、学習が停滞してしまう問題です。一方、ReLUは、入力が正である限り、その勾配は常に <code>1</code> です。これにより、層を深くしても勾配が消えにくく、誤差逆伝播法による学習が効率的に進むようになりました。この性質が、<strong>AlexNet</strong> (2012) に代表されるような、深いネットワーク（ディープラーニング）の成功を可能にした最大の要因です。</p>
+<p><strong>勾配消失問題の緩和</strong>: シグモイド関数が抱えていた最大の課題は、<strong>勾配消失問題</strong>でした。入力の絶対値が大きくなると勾配（傾き）が0に近づき、学習が停滞してしまう問題です。一方、ReLUは、入力が正である限り、その勾配は常に <code>1</code> です。これにより、層を深くしても勾配が消えにくく、誤差逆伝播法による学習が効率的に進むようになりました。この性質が、<strong>AlexNet</strong> (2012) に代表されるような、深いネットワーク（<a href="01_AI基礎/03_ディープラーニング.md"><abbr title="深層学習とも呼ばれ、多層のニューラルネットワークを用いて、より複雑なパターンを学習する機械学習の手法">ディープラーニング</abbr></a>）の成功を可能にした最大の要因です。</p>
 </li>
 <li>
 <p><strong>スパース性による汎化性能の向上</strong>: 入力が0以下の場合、ReLUの出力は0になります。これは、ネットワーク内の一部のニューロンが常に非活性化状態になることを意味し、<strong>スパース（疎）</strong>な表現を生み出します。このスパース性が、計算効率の向上に寄与すると同時に、モデルがデータに過剰に適合してしまう<strong>過学習 (Overfitting)</strong> を抑制し、汎化性能を高める効果があると考えられています。</p>
@@ -2135,5 +2144,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2013,7 +2022,7 @@
 
 <p>難易度: 60</p>
 <h2 id="ai">エキスパートシステムとは：AIの第一次ブームを牽引した「知識」のシステム<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>AIの歴史を振り返ると、いくつかの大きなブームと停滞期がありました。その中でも、1980年代に大きな注目を集め、AI研究を牽引したのが「エキスパートシステム (Expert System)」です。これは、特定の専門分野における人間の専門家（エキスパート）の知識をコンピュータに組み込み、その知識に基づいて推論や問題解決を行うシステムです。</p>
+<p>AIの歴史を振り返ると、いくつかの大きなブームと停滞期がありました。その中でも、1980年代に大きな注目を集め、AI研究を牽引したのが「<a href="04_用語解説/02_エキスパートシステム.md"><abbr title="特定分野の専門家の知識と推論過程をコンピュータに実装した人工知能システム">エキスパートシステム</abbr></a> (Expert System)」です。これは、特定の専門分野における人間の専門家（エキスパート）の知識をコンピュータに組み込み、その知識に基づいて推論や問題解決を行うシステムです。</p>
 <h3 id="1">1. エキスパートシステムの基本的な仕組み<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>エキスパートシステムは、主に以下の3つの要素で構成されています。</p>
 <ol>
@@ -2069,7 +2078,7 @@
 <p>これらの限界により、エキスパートシステムは特定の狭い分野での成功に留まり、汎用的な知能の実現には至りませんでした。結果として、AIへの過度な期待は失望へと変わり、研究資金が減少する「冬の時代」が訪れることになります。</p>
 <h3 id="_3">まとめ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>エキスパートシステムは、AIが「知識」を扱うという点で画期的なアプローチであり、特定の専門分野で実用的な成果を上げたことで、AIの可能性を世に示しました。しかし、知識獲得の困難さや柔軟性の欠如といった課題に直面し、AIの第一次ブームの終焉を迎えました。</p>
-<p>その後のAI研究は、ルールベースのアプローチから、データから自動的に知識を学習する「機械学習」へと重心を移していくことになります。エキスパートシステムの経験は、AIが実世界の問題を解決するためには、単なる知識の蓄積だけでなく、データからの学習能力が不可欠であることを教えてくれた、重要な歴史的段階と言えるでしょう。</p>
+<p>その後のAI研究は、ルールベースのアプローチから、データから自動的に知識を学習する「<a href="01_AI基礎/02_機械学習.md"><abbr title="コンピュータがデータから自動的に学習し、データの背景にあるルールやパターンを発見する技術">機械学習</abbr></a>」へと重心を移していくことになります。エキスパートシステムの経験は、AIが実世界の問題を解決するためには、単なる知識の蓄積だけでなく、データからの学習能力が不可欠であることを教えてくれた、重要な歴史的段階と言えるでしょう。</p>
 
 
 
@@ -2172,5 +2181,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

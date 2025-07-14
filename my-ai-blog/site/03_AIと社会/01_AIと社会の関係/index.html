@@ -56,7 +56,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -2012,7 +2021,7 @@
 <li><strong>バイアスと公平性の問題</strong>: AIは、学習データに含まれる偏見（バイアス）を増幅させてしまうことがあります。例えば、過去の採用データに性別や人種による偏りがあった場合、AIがそれを学習し、特定の属性を持つ人々を不当に差別するような判断を下してしまう可能性があります。</li>
 <li><strong>プライバシーの侵害</strong>: AI、特に顔認証や行動追跡といった技術は、個人のプライバシーを深刻に侵害する危険性をはらんでいます。国家や巨大企業がこれらの技術を濫用すれば、常に監視される社会（監視社会）が到来するかもしれません。</li>
 <li><strong>責任の所在の曖昧化</strong>: 自動運転車が事故を起こした場合、その責任は誰にあるのでしょうか？所有者、自動車メーカー、それともAI開発者でしょうか。AIが自律的な判断を下すようになると、従来の法制度では対応できない、責任の所在が曖昧なケースが増えていくと考えられます。</li>
-<li><strong>シンギュラリティ（技術的特異点）への懸念</strong>: AIが自らよりも賢いAIを作り出す「知能の爆発」が起こり、人間の知性を超える「超知能」が誕生する時点、すなわちシンギュラリティが到来するという予測があります。これが人類に何をもたらすのかについては、専門家の間でも意見が分かれており、究極的な問いとして議論されています。</li>
+<li><strong><a href="04_用語解説/03_シンギュラリティ.md"><abbr title="人工知能が人間の知能を超える転換点、技術的特異点">シンギュラリティ</abbr></a>（技術的特異点）への懸念</strong>: AIが自らよりも賢いAIを作り出す「知能の爆発」が起こり、人間の知性を超える「超知能」が誕生する時点、すなわちシンギュラリティが到来するという予測があります。これが人類に何をもたらすのかについては、専門家の間でも意見が分かれており、究極的な問いとして議論されています。</li>
 </ul>
 <h3 id="3-ai">3. 私たちに求められること：AIとの共存に向けた対話<a class="headerlink" href="#3-ai" title="Permanent link">&para;</a></h3>
 <p>AIという強力な技術を、人類の幸福のために活用していくためには、技術開発者だけでなく、法律家、倫理学者、政策決定者、そして私たち市民一人ひとりが、これらの課題について真剣に考え、対話していく必要があります。</p>
@@ -2125,5 +2134,7 @@
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
