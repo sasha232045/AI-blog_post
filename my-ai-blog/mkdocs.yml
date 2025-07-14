@@ -30,7 +30,7 @@ extra_css:
 # プラグインの設定
 plugins:
   - search
-  - autorefs
+  - autolinks
 
 # Markdown拡張機能
 markdown_extensions:
@@ -44,6 +44,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+  - footnotes
 
 # ナビゲーション（目次）の設定
 # ここにフォルダ構造を記述すると、それがサイトのメニューになる
@@ -77,7 +78,6 @@ nav:
     - 強化学習: 04_用語解説/07_強化学習.md
     - 分類: 04_用語解説/08_分類.md
     - 回帰: 04_用語解説/09_回帰.md
-    - 回帰: 04_用語解説/10_回帰.md
     - クラスタリング: 04_用語解説/11_クラスタリング.md
     - 次元削減: 04_用語解説/12_次元削減.md
     - GPU: 04_用語解説/13_GPU.md
